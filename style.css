@@ -1,0 +1,96 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  color: #eee;
+  background: linear-gradient(180deg, #001f3f 0%, #003366 50%, #004080 100%);
+  background-attachment: fixed;
+  transition: background 1s ease;
+}
+
+h1 {
+  text-align: center;
+  color: #ffd700;
+}
+
+.period {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Календар */
+.calendar {
+  margin: 0 auto 20px auto;
+  width: 80%;
+  text-align: center;
+}
+.calendar table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.calendar th, .calendar td {
+  border: 1px solid #222;
+  padding: 10px;
+  cursor: pointer;
+  color: #fff;
+  background: linear-gradient(180deg, #001a33 0%, #002b5c 100%);
+  transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+.calendar th {
+  background-color: rgba(255, 126, 95, 0.9);
+}
+.calendar td.active {
+  background: #ffd700;
+  color: #000;
+  font-weight: bold;
+  border: 1px solid #ffea00;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+  animation: pulseGlow 2s infinite;
+}
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 10px rgba(255, 215, 0, 0.6); }
+  50% { box-shadow: 0 0 25px rgba(255, 215, 0, 1); }
+  100% { box-shadow: 0 0 10px rgba(255, 215, 0, 0.6); }
+}
+.calendar td.disabled {
+  background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
+  color: #777;
+  cursor: not-allowed;
+}
+.calendar td.clickable:hover {
+  background: linear-gradient(180deg, #003366 0%, #004080 100%);
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 128, 255, 0.7);
+}
+
+/* Таблиця графіка */
+.schedule {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  text-align: center;
+  color: #fff;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.schedule.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.schedule th {
+  background: #ff7e5f;
+  color: #fff;
+  padding: 10px;
+}
+.schedule td {
+  border: 1px solid #555;
+  padding: 8px;
+}
+.schedule tr.active td {
+  background: #ffd700;
+  color: #000;
+  font-weight: bold;
+}

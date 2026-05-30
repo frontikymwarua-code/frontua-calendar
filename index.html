@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>ФронтUA: Моніторинг</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>⚔️🛡 ФронтUA: Моніторинг</h1>
+  <p class="period">📅 01.06.2026 – 07.06.2026</p>
+
+  <!-- Календар -->
+  <div class="calendar">
+    <table>
+      <thead>
+        <tr>
+          <th>Пн</th><th>Вт</th><th>Ср</th><th>Чт</th><th>Пт</th><th>Сб</th><th>Нд</th>
+        </tr>
+      </thead>
+      <tbody id="calendar-body">
+        <!-- Заповнюється через JS -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Таблиця графіка -->
+  <div id="schedule-container">
+    <table class="schedule">
+      <thead>
+        <tr>
+          <th>День</th>
+          <th>Час чергування</th>
+          <th>Імена</th>
+        </tr>
+      </thead>
+      <tbody id="schedule-body">
+        <!-- Заповнюється через JS -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
