@@ -26,7 +26,7 @@ const juneDates = [
   { dayNumber: 10, weekDay: 3, active: false },
   { dayNumber: 11, weekDay: 4, active: false },
   { dayNumber: 12, weekDay: 5, active: false },
-  { dayNumber: 13, weekDay: 6, active: true },
+  { dayNumber: 13, weekDay: 6, active: false },
   { dayNumber: 14, weekDay: 0, active: false },
   { dayNumber: 15, weekDay: 1, active: false },
   { dayNumber: 16, weekDay: 2, active: false },
