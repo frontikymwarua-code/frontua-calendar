@@ -5,7 +5,6 @@ body {
   color: #eee;
   background: linear-gradient(180deg, #001f3f 0%, #003366 50%, #004080 100%);
   background-attachment: fixed;
-  transition: background 1s ease;
 }
 
 h1 {
@@ -104,7 +103,7 @@ h1 {
   font-weight: bold;
 }
 
-/* Правила чергування */
+/* Правила чергування — завжди видимі */
 .rules {
   width: 80%;
   margin: 20px auto;
@@ -114,13 +113,8 @@ h1 {
   border-radius: 8px;
   color: #fff;
   box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-.rules.show {
-  opacity: 1;
-  transform: translateY(0);
+  opacity: 1; /* завжди видно */
+  transform: translateY(0); /* без анімації появи */
 }
 .rules h2 {
   text-align: center;
